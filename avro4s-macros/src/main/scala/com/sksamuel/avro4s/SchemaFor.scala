@@ -200,7 +200,7 @@ object ToSchema extends LowPriorityToSchema {
 }
 
 @implicitNotFound("Could not find implicit SchemaFor[${T}]")
-trait SchemaFor[T] {
+trait SchemaFor[T] extends Serializable {
   def apply(): org.apache.avro.Schema
 }
 
