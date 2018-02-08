@@ -15,7 +15,7 @@ import shapeless.{:+:, CNil, Coproduct, Generic, Inl, Inr, Lazy}
 import scala.collection.JavaConverters._
 import scala.language.experimental.macros
 
-trait ToValue[A] {
+trait ToValue[A] extends Serializable {
   def apply(value: A): Any = value
 }
 
